@@ -1,26 +1,31 @@
 var mongoose = require('mongoose');
 var Api = mongoose.model('Api');
-var email = require("emailjs/email");
+var nodemailer = require("nodemailer");
 module.exports = {
     send_comment: function(request,response)
     {
-        console.log("INSIDE SEND COMMENT")
-        var server = email.server.connect({
-            user:"portfolioblam@gmail.com",
-            password:"1qazxsW@",
-            host:"smtp.gmail.com",
-            ssl:false
-        });
+        var transporter = nodemailer.createTransport({
+            service:'gmail',
+            auth:{
+                user:'portfolioblam@gmail.com',
+                pass: '1qazxsW@'
+            }
+        })
 
-        server.send({
-            text:request.body.comment,
-            from:"portfolioblam@gmail.com",
-            to:"portfolioblam@gmail.com",
-            subject:request.body.name+": portfolio comment"
-        }, function(err,message){
+        var mail_options = {
+            from:'portfolioblam@gmail.com',
+            to:'portfolioblam@gmail.com',
+            subject:'portfolio comment',
+            text:request.body.name+' sent: '+request.body.comment
+        }
+
+        transporter.sendMail(mail_options,function(err,info){
             if(err){
                 console.log(err);
+            }else{
+                console.log('Email sent:',info.response);
             }
-        }); 
+        });
+        //console.log('test',request.body);
     }
 }

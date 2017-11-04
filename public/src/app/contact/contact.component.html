@@ -2,7 +2,7 @@
   <!-- Form Area -->
   <div class="contact-form">
     <!-- Form -->
-    <form id="contact-us" name="formData"  method="post" action="http://formspree.io/brian.michael.lam@gmail.com" #formData="ngForm">
+    <form id="contact-us" name="formData"  (submit)="send_comment(formData)"  #formData="ngForm">
       <!-- Left Inputs -->
       <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
         <!-- Name -->
