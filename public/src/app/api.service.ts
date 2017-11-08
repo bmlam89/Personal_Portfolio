@@ -6,7 +6,8 @@ export class ApiService {
 
   data = {
     name:'',
-    comment:''
+    comment:'',
+    email:''
   }
 
   constructor(private http:Http) { }
@@ -15,6 +16,7 @@ export class ApiService {
   {
     this.data.name = form.value.name;
     this.data.comment = form.value.comment;
+    this.data.email = form.value.email;
     console.log("SERVICE",this.data)
     return this.http.post('/send_comment',this.data).subscribe(
     (err)=>{

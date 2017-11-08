@@ -7,6 +7,8 @@
       <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
         <!-- Name -->
         <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" [(ngModel)]="data.name" #name="ngModel"/>
+        <!-- Email -->
+        <input type="text" name="email" id="email" class="form" placeholder="Email (optional)" [(ngModel)]="data.email" #email="ngModel"/>
         <!-- Subject -->
         <input type="text" name="subject" id="subject" hidden class="form" placeholder="Subject" value="portfolio comment" />
       </div><!-- End Left Inputs -->

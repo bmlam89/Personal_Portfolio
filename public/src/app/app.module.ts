@@ -12,12 +12,14 @@ import { ProjectsComponent } from './projects/projects.component';
 
 
 import {ApiService} from './api.service';
+import { SentComponent } from './sent/sent.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    SentComponent
   ],
   imports: [
     BrowserModule,

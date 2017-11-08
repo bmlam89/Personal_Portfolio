@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../api.service';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -9,17 +10,18 @@ export class ContactComponent implements OnInit {
 
   data = {
     name:'',
-    comment:''
+    comment:'',
+    email:''
   }
-  constructor(private service:ApiService) { }
+  constructor(private service:ApiService, private router:Router) { }
 
   ngOnInit() {
   }
 
   send_comment(form)
   {
-    console.log("TEST",form.value.name);
     this.service.send_comment(form);
+    this.router.navigate(['sent']);
   }
 
 }

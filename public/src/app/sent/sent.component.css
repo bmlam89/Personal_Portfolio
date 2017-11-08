@@ -1,0 +1,10 @@
+.wrapper{
+    background-color:#eee;
+    width:1400px;
+    height:1400px;   
+}
+
+.x{
+    background-color: lightcoral;
+    color: white;
+}

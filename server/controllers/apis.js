@@ -16,7 +16,7 @@ module.exports = {
             from:'portfolioblam@gmail.com',
             to:'portfolioblam@gmail.com',
             subject:'portfolio comment',
-            text:request.body.name+' sent: '+request.body.comment
+            text:request.body.name+' sent: '+request.body.comment +'. their email is: '+request.body.email
         }
 
         transporter.sendMail(mail_options,function(err,info){
