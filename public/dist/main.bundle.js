@@ -375,7 +375,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".x{\n    margin-left: 9%;\n    margin-top: 3%;\n}\n\n.y{\n    margin-left: 5%;\n    margin-top: 3%;\n}\n\n.youtube-player{\nborder: 1px solid #1D740C;\nheight: 300px;\nwidth: 300px;\npadding: 0px;\n/*margin-left: 25px;\nmargin-bottom: 25px;\n/*border-radius: 50%;\n-moz-border-radius: 50%;\n-webkit-border-radius: 50%;*/\n}", ""]);
 
 // exports
 
@@ -388,7 +388,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/projects/projects.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  projects works!\n</p>\n"
+module.exports = "  <div class=\"row\">\n    <div class=\"col-sm-3 x\">\n        <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/fyM_k3zvKAA\" frameborder=\"0\" gesture=\"media\" allowfullscreen class=\"youtube-player\" ></iframe>      \n        <p><strong>Description:</strong> Simple group messaging web application.<br>\n        <strong>Technologies Used:</strong> Express, NodeJS, jQuery, Socket.Io\n      </p>\n    </div>\n    <div class=\"col-sm-3 y\">\n        <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/r19ljwh279w\" frameborder=\"0\" gesture=\"media\" allowfullscreen class=\"youtube-player\"></iframe>        \n        <p><strong>Description:</strong> Course management web application<br>\n        <strong>Technologies Used:</strong> Python, Django, HTML, CSS, MySQL, bootstrap\n    </div> \n    <!--<div class=\"col-sm-3 y\">\n      <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/xu4l08Pkwh8\" frameborder=\"0\" allowfullscreen class=\"youtube-player\"></iframe>\n      <p><strong>Description:</strong> Commerce site where users can sell general products.<br>\n        Users can post multiple products and remove or update a posting if they change their mind.<br>\n      <strong>Technologies Used:</strong> Express, NodeJS, jQuery, Angular   </div>  -->\n  </div>\n\n  <!--<div class=\"row\">\n    <div class=\"col-sm-3 x\">\n      <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/xu4l08Pkwh8\" frameborder=\"0\" allowfullscreen class=\"youtube-player\"></iframe>\n      <p><strong>Description:</strong> Simple group messaging web application.<br>\n      <strong>Technologies Used:</strong> Express, NodeJS, jQuery, Socket.Io    </div>\n    <div class=\"col-sm-3 y\">\n      <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/xu4l08Pkwh8\" frameborder=\"0\" allowfullscreen class=\"youtube-player\"></iframe>\n      <p><strong>Description:</strong> Simple group messaging web application.<br>\n      <strong>Technologies Used:</strong> Express, NodeJS, jQuery, Socket.Io    </div>    \n  </div>-->\n"
 
 /***/ }),
 
